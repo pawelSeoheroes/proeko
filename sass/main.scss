@@ -23,8 +23,8 @@ html {
 .clipan {
     font-size: 1.6rem;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(200px, 1140px) minmax(0, 1fr);
-    padding: 0 15px;
+    grid-template-columns: minmax(0, 1fr) minmax(200px, 1110px) minmax(0, 1fr);
+    margin: 0 15px;
     
     &__section {
         grid-column: 2/3;
@@ -39,7 +39,9 @@ html {
     }
 }
 .cpnav {
-
+    & > ul {
+        padding: 0;
+    }
     &__list {
         display: grid;
         grid-template-columns: repeat(4, minmax(100px, 1fr));
@@ -52,6 +54,14 @@ html {
         padding: 30px;
     }
 
+    &__item--active {
+        background-color: $greenish;
+        color: #fff;
+        border-color: #fff;
+        & > .cpnav__icon {
+            fill: #fff;
+        }
+    }
     &__notification {
 
     }
